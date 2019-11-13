@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Módulo_3</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<h3 style="text-align: center;">Criando uma lista salvando e excluindo do localstorage.</h3>
+		<ul id="app1">
+		</ul>
+		<input class="input-Lista" type="text" placeholder="digite aqui">
+		<button class="button-Lista">adicionar</button>
+		<script>
+			var listaElement = document.getElementById("app1");
+			var inputsElement = document.querySelector("app1, .input-Lista");
+			var buttonsElement = document.querySelector("app1, .button-Lista");
+
+			var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
+
+			function renderTodos() {
+				
+				listaElement.innerHTML = '';
+				
+				for (var todo of todos){
+					var todosElement = document.createElement('li');
+					var todoText = document.createTextNode(todo + ' ');
+					
+					var linkElement = document.createElement('a');
+					linkElement.setAttribute('href', '#');
+					
+					var pos = todos.indexOf(todo);
+					linkElement.setAttribute('onclick', 'deleteTodos('+ pos +')');
+					var linkTextA = document.createTextNode('Excluir');
+					
+					linkElement.appendChild(linkTextA);
+					todosElement.appendChild(todoText);
+					
+					todosElement.appendChild(linkElement);
+					listaElement.appendChild(todosElement);
+					
+				}	
+			}
+
+			renderTodos();
+
+			function addTodos(){
+				var valorInput = inputsElement.value;
+				todos.push(valorInput);
+				inputsElement.value = '';
+				renderTodos();
+				saveToStorage();
+			}
+
+			buttonsElement.onclick = addTodos;
+
+			function deleteTodos(pos){
+				todos.splice(pos, 1);
+				renderTodos();
+				saveToStorage();
+			}
+
+			function saveToStorage (){
+				localStorage.setItem('list_todos', JSON.stringify(todos));
+			}
+		</script>
+	</body>
+</html>
