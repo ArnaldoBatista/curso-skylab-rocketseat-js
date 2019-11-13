@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Módulo 4</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<input type="text" name="usuario" id="usuario">
+		<button onclick="usuario()">Buscar</button>
+		<h3>Repositórios</h3>
+		<div id="carregando"></div>
+		<ul>
+		</ul>
+		<script src ="axios.js"> </script>
+		<script>
+			//criando uma variavel passando a classe ajax
+			var xhr = new XMLHttpRequest();
+
+			//consumindo uma api do servidor ex github
+			xhr.open('GET', 'https://api.github.com/users/arnaldobatista');
+			xhr.send(null);
+
+			xhr.onreadystatechange = function (){
+				if (xhr.readyState === 4){
+					//exibindo o corpo da requisição que está em JSON tera que ser convertido
+					console.log(JSON.parse(xhr.responseText));
+				}
+			}
+
+			var minhaPromisse = function (){
+			return new Promise(function(resolve, reject){
+				var xhrp = new XMLHttpRequest();
+				xhrp.open('GET', 'https://api.github.com/users/arnaldobatista');
+				xhrp.send(null);
+				
+				xhrp.onreadystatechange = function (){
+					if (xhrp.readyState === 4){
+						//código 200 significa que retornou ok
+						if (xhrp.status === 200){
+							resolve(JSON.parse(xhrp.responseText));
+						}
+						else{
+							reject('Erro na requisição');
+						}
+					}
+				}
+			});
+			}
+			minhaPromisse()
+			.then(function(response) {
+				console.log(response);
+			})
+			.catch(function(error){
+				console.warn(error);
+			});
+
+			//usando axios retorna de forma mais facil os dados da api	
+			axios.get('https://api.github.com/users/arnaldobatista')
+			.then(function(response) {
+				console.log(response);
+			})
+			.catch(function(error){
+				console.warn(error);
+			});
+
+			//função retornando idade com promisse após 2 segundos se for maior de 18 anos	
+			function checarIdade(idade){
+			return new Promise (function(sucess, erro){
+				if (idade >= 18){
+					setTimeout(sucess, 2000);
+				}
+				else{
+					erro("Erro na requisição");
+				}
+			});
+			}
+			checarIdade(20)
+			.then(function(){
+				console.log("Maior de 18 anos");
+			})
+			.catch(function(){
+				console.log("menor de 18 anos");
+			});
+			
+			//carregando repositorios dos usuarios do github
+			var listElement = document.querySelector('ul');
+			var usuarioInput = document.querySelector("#usuario");
+			var loadingElement = document.querySelector('#carregando');
+			function repositorios(repositorio){
+				for(var repos of repositorio){
+					var textElement = document.createTextNode(repos.name);
+					var liElement = document.createElement('li');
+					liElement.appendChild(textElement);
+					listElement.appendChild(liElement);
+				}
+			}
+			function usuario(){
+				var user = usuarioInput.value;
+				loading();
+				if(user){
+					axios.get('https://api.github.com/users/' + user + '/repos')
+					.then(function (response) {
+						repositorios(response.data);
+						loadingElement.innerHTML = "";
+					})
+					.catch(function(){
+						alert("Usuario não encontrado");
+						loadingElement.innerHTML = "";
+					});
+				}
+			}
+			function loading(loading){
+				listElement.innerHTML = "";
+				var textElement = document.createTextNode("carregando...");
+				loadingElement.appendChild(textElement);
+				listElement.appendChild(loadingElement);
+			}
+		</script>
+	</body>
+</html>
