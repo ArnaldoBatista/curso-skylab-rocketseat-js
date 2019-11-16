@@ -1,2 +1,2 @@
-# curso-skylab-rocketseat_js
+# curso skylab rocketseat js
 Curso javascript básico.
