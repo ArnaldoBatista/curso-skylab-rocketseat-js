@@ -38,7 +38,37 @@ Escreva uma função que produza o seguinte resultado:O Diego possui as habilida
 Javascript, ReactJS, ReduxO Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir  
 Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um arraycom um separador utilize o join.
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_1.html#L72).
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_1.html#L72).  
+
+### Módulo 2 exercicios.  
+
+1. Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadradovermelho com 100px de altura e     largura. Sempre que o botão for clicado um novo quadrado deveaparecer na tela.  
+
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_2.html#L29).  
+
+2. Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima dealgum quadrado troque sua cor   para uma cor aleatória gerada pela função abaixo:  
+function getRandomColor() {  var letters = "0123456789ABCDEF";  var color = "#";  for (var i = 0; i < 6; i++) {    color +=   letters[Math.floor(Math.random() * 16)];  }  return color;}var newColor = getRandomColor(); // #E943F0  
+
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_2.html#L20).  
+
+3. A partir do seguinte vetor:  
+var nomes = ["Diego", "Gabriel", "Lucas"];  
+Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:  
+* Diego  
+* Gabriel  
+* Lucas  
+  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_2.html#L48).  
+
+4. Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:  
+<input type="text" name="nome"><button onClick="adicionar()">Adicionar</button>  
+Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de  
+nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos demais itens anteriores.  
+Além disso, o conteúdo do input deve ser apagado após o clique. 
+
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_2.html#L58).
+
+
 
 
 
