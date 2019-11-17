@@ -24,7 +24,10 @@ Dica: para verificar se um vetor contém um valor, utilize o método indexOf.
 [resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_1.html#L42).  
 
 4. Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:  
-function experiencia(anos) {  // código aqui}var anosEstudo = 7;experiencia(anosEstudo);  
+function experiencia(anos) {    
+// código aqui}  
+var anosEstudo = 7;  
+experiencia(anosEstudo);  
 // De 0-1 ano: Iniciante  
 // De 1-3 anos: Intermediário  
 // De 3-6 anos: Avançado  
@@ -66,7 +69,19 @@ Ao clicar no botão, a função adicionar() deve ser disparada adicionando um no
 nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos demais itens anteriores.  
 Além disso, o conteúdo do input deve ser apagado após o clique. 
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_2.html#L58).
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_2.html#L58).  
+
+### Módulo 3 trabalhando com app.  
+
+[Criando aplicação](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_3.html).  
+
+[Renderizando elementos](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_3.html#L20).  
+
+[Criando elementos](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_3.html#L46).  
+
+[Excluindo elementos](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_3.html#L56).
+
+[Salvando no storage](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/modulo_3.html#L62).  
 
 
 
