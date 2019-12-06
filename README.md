@@ -128,7 +128,7 @@ const Adm1 = new Admin('email@teste.com', 'senha123');
 console.log(User1.isAdmin()) // false  
 console.log(Adm1.isAdmin()) // true  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L1).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L1).  
 
 2. A partir do seguinte vetor e utilizando os métodos de array (map, reduce, filter e find):  
 
@@ -140,16 +140,16 @@ const usuarios = [
 
 2.1 Utilizando o map Crie uma variável que contenha todas idades dos usuários: [23, 15, 30]  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L33).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L33).  
 
 2.2 Utilizando o filter Crie uma variáveis que tenha apenas os usuários que trabalham na Rocketseat e com mais de 18
 anos: [{ nome: 'Diego', idade: 23, empresa: 'Rocketseat' }]  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L37).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L37).  
 
 2.3 Utilizando o find Crie uma variável que procura por um usuário que trabalhe na empresa Google: undefined  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L41).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L41).  
 
 2.4 Unindo operações Multiplique a idade de todos usuários por dois e depois realize um filtro nos usuários que possuem no máximo 50 anos:  
 
@@ -159,7 +159,7 @@ anos: [{ nome: 'Diego', idade: 23, empresa: 'Rocketseat' }]
  { nome: 'Gabriel', idade: 30, empresa: 'Rocketseat' },
 ]  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L45).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L45).  
 
 3. Converta as funções nos seguintes trechos de código em Arrow Functions:  
 
@@ -168,7 +168,7 @@ arr.map(function(item) {
  return item + 10;  
 });  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L51).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L51).  
 
 // Dica: Utilize uma constante pra function  
 const usuario = { nome: 'Diego', idade: 23 };  
@@ -177,7 +177,7 @@ function mostraIdade(usuario) {
 }  
 mostraIdade(usuario);  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L55).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L55).  
 
 // Dica: Utilize uma constante pra function  
 const nome = "Diego";  
@@ -188,7 +188,7 @@ function mostraUsuario(nome = 'Diego', idade = 18) {
 mostraUsuario(nome, idade);  
 mostraUsuario(nome);  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L59).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L59).  
 
 const promise = function() {  
  return new Promise(function(resolve, reject) {  
@@ -196,7 +196,7 @@ const promise = function() {
  })  
 }  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L65).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L65).  
 
 4.1 Desestruturação simples A partir do seguinte objeto:  
 const empresa = {  
@@ -212,7 +212,7 @@ console.log(nome); // Rocketseat
 console.log(cidade); // Rio do Sul  
 console.log(estado); // SC  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L68).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L68).  
 
 4.2 Desestruturação em parâmetros Na seguinte função:  
 function mostraInfo(usuario) {  
@@ -223,7 +223,7 @@ mostraInfo({ nome: 'Diego', idade: 23 })
 Utilize a desestruturação nos parâmetros da função para buscar o nome e idade do usuário separadamente e a função poder retornar apenas:  
 return `${nome} tem ${idade} anos.`;  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L82).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L82).  
 
 5. Utilizando o operador de rest/spread (...) realize as seguintes operações:  
 
@@ -236,7 +236,7 @@ Crie uma função que recebe inúmeros parâmetros e retorna a soma de todos ele
 console.log(soma(1, 2, 3, 4, 5, 6)); // 21  
 console.log(soma(1, 2)); // 3  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L89).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L89).  
 
 5.2 Spread A partir do objeto e utilizando o operador spread:  
 const usuario = {  
@@ -251,14 +251,14 @@ const usuario = {
 Crie uma variável usuario2 que contenha todos os dados do usuário porém com nome Gabriel.  
 Crie uma variável usuario3 que contenha todos os dados do usuário porém com cidade Lontras.  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L94).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L94).  
 
 6. Converta o seguinte trecho de código utilizando Template Literals:  
 const usuario = 'Diego';  
 const idade = 23;  
 console.log('O usuário ' + usuario + ' possui ' + idade + ' anos');  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L110).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L110).  
 
 7. Utilize a sintaxe curta de objetos (Object Short Syntax) no seguinte objeto:  
 const nome = 'Diego';  
@@ -269,7 +269,7 @@ const usuario = {
  cidade: 'Rio do Sul',  
 };  
 
-[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/main.js#L115).  
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L115).  
 
 
 
