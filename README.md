@@ -287,6 +287,77 @@ Em seu arquivo principal importe tanto a classe quanto a variável idade e renom
 
 [resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_2/src/main.js#L1).  
 
+### Módulo 3 exercicios.  
+
+1. Transforme os seguintes trechos de código utilizando async/await:  
+
+// Funão delay aciona o .then após 1s  
+const delay = () => new Promise(resolve => setTimeout(resolve, 1000));  
+function umPorSegundo() {  
+   delay().then(() => {  
+   console.log('1s');  
+   delay().then(() => {  
+   console.log('2s');  
+   delay().then(() => {  
+   console.log('3s');  
+   });  
+   })  
+   });  
+}  
+umPorSegundo();  
+
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_3/src/main.js#L1).  
+
+import axios from 'axios';  
+function getUserFromGithub(user) {  
+   axios.get(`https://api.github.com/users/${user}`)  
+   .then(response => {  
+   console.log(response.data);  
+   })  
+   .catch(err => {  
+   console.log('Usuário não existe');  
+   })  
+}  
+getUserFromGithub('diego3g');  
+getUserFromGithub('diego3g124123');  
+
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_3/src/main.js#L9).  
+
+class Github {  
+   static getRepositories(repo) {  
+   axios.get(`https://api.github.com/repos/${repo}`)  
+   .then(response => {  
+   console.log(response.data);  
+   })  
+   .catch(err => {  
+   console.log('Repositório não existe');  
+   })  
+   }  
+}  
+Github.getRepositories('rocketseat/rocketseat.com.br');  
+Github.getRepositories('rocketseat/dslkvmskv');  
+
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_3/src/main.js#L22).  
+
+const buscaUsuario = usuario => {  
+   axios.get(`https://api.github.com/users/${user}`)  
+   .then(response => {  
+   console.log(response.data);  
+   })  
+   .catch(err => {  
+   console.log('Usuário não existe');  
+   });  
+}  
+buscaUsuario('diego3g');  
+
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_3/src/main.js#L36).  
+
+
+
+
+
+
+
 
 
 
