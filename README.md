@@ -240,13 +240,13 @@ console.log(soma(1, 2)); // 3
 
 5.2 Spread A partir do objeto e utilizando o operador spread:  
 const usuario = {  
- nome: 'Diego',  
- idade: 23,  
- endereco: {  
- cidade: 'Rio do Sul',  
- uf: 'SC',  
- pais: 'Brasil',  
- }  
+   nome: 'Diego',  
+   idade: 23,  
+   endereco: {  
+   cidade: 'Rio do Sul',  
+   uf: 'SC',  
+   pais: 'Brasil',  
+   }  
 };  
 Crie uma variável usuario2 que contenha todos os dados do usuário porém com nome Gabriel.  
 Crie uma variável usuario3 que contenha todos os dados do usuário porém com cidade Lontras.  
@@ -264,12 +264,29 @@ console.log('O usuário ' + usuario + ' possui ' + idade + ' anos');
 const nome = 'Diego';  
 const idade = 23;  
 const usuario = {  
- nome: nome,  
- idade: idade,  
- cidade: 'Rio do Sul',  
+   nome: nome,  
+   idade: idade,    
+   cidade: 'Rio do Sul',  
 };  
 
 [resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_1/main.js#L115).  
+
+### Módulo 2 exercicios.  
+
+1. Crie um arquivo chamado functions.js com o seguinte conteúdo:  
+export const idade = 23;  
+export default class Usuario {  
+   static info() {  
+   console.log('Apenas teste');  
+   }  
+}  
+
+Agora em seu arquivo principal import apenas a classe Usuario renomeando-a para ClasseUsuario e chame a funão info();  
+Em seu arquivo principal importe a variável de idade e exiba a mesma em tela;  
+Em seu arquivo principal importe tanto a classe quanto a variável idade e renomeie a variável idade para IdadeUsuario.  
+
+[resolução](https://github.com/ArnaldoBatista/curso-skylab-rocketseat-js/blob/master/es-6/modulo_2/src/main.js#L1).  
+
 
 
 
