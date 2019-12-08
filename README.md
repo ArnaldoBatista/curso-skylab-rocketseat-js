@@ -56,7 +56,7 @@ function getRandomColor() {  var letters = "0123456789ABCDEF";  var color = "#";
 
 3. A partir do seguinte vetor:  
 var nomes = ["Diego", "Gabriel", "Lucas"];  
-Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:  
+Preencha uma lista (`<ul>`) no HTML com os itens da seguinte forma:  
 * Diego  
 * Gabriel  
 * Lucas  
@@ -273,7 +273,7 @@ const usuario = {
 
 ### Módulo 2 exercicios.  
 
-1. Crie um arquivo chamado functions.js com o seguinte conteúdo:  
+1.Crie um arquivo chamado functions.js com o seguinte conteúdo:  
 export const idade = 23;  
 export default class Usuario {  
    static info() {  
